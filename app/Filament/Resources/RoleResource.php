@@ -52,7 +52,6 @@ class RoleResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label('id')
                     ->sortable()
-                    ->hidden(!Auth::user()->can('can_change_status'))
                     ->disabledClick(),
                 Tables\Columns\TextColumn::make('name')
                     ->label('Роль')
@@ -63,10 +62,10 @@ class RoleResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
-                    ->visible(fn (): bool => auth()->user()->can('edit_roles'))
+//                    ->visible(fn (): bool => auth()->user()->can('edit_roles'))
                     ->button(),
                 Tables\Actions\DeleteAction::make()
-                    ->visible(fn (): bool => auth()->user()->can('delete_roles'))
+//                    ->visible(fn (): bool => auth()->user()->can('delete_roles'))
                     ->button(),
             ])
             ->bulkActions([

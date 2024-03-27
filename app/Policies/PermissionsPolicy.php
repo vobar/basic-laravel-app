@@ -30,7 +30,7 @@ class PermissionsPolicy
      */
     public function create(User $user): bool
     {
-        return Auth::user()->can('add_permissions');
+        return Auth::user()->can('create_permissions');
     }
 
     /**
@@ -38,7 +38,7 @@ class PermissionsPolicy
      */
     public function update(User $user, Permission $model): bool
     {
-        return auth()->user()->can('edit_permissions');
+        return auth()->user()->can('update_permissions');
     }
 
     /**

@@ -29,7 +29,7 @@ class UserPolicy
      */
     public function create(User $user): bool
     {
-        return Auth::user()->can('add_users');
+        return Auth::user()->can('create_users');
     }
 
     /**
@@ -37,7 +37,7 @@ class UserPolicy
      */
     public function update(User $user, User $model): bool
     {
-        return Auth::user()->can('edit_users');
+        return Auth::user()->can('update_users');
     }
 
     /**

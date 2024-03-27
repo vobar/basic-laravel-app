@@ -30,7 +30,7 @@ class RolesPolicy
      */
     public function create(User $user): bool
     {
-        return Auth::user()->can('store_roles');
+        return Auth::user()->can('create_roles');
     }
 
     /**
